@@ -72,7 +72,7 @@ app.delete("/repositories/:id", (request, response) => {
 });
 
 // Increse the number of likes by 1
-app.put("/repositories/:id/like", (request, response) => {
+app.post("/repositories/:id/like", (request, response) => {
   const { id } = request.params;
 
   const repo = repos.find(repo => repo.id === id);
